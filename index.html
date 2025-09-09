@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Level-Up Gamer — Tienda</title>
+
+  <!-- Google Fonts propuestas en el enunciado -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Metadatos para SEO / accesibilidad -->
+  <meta name="description"
+    content="Level-Up Gamer — tienda online de productos para gamers en Chile. Consolas, accesorios, computadores y más." />
+</head>
+
+<body class="lu-body">
+  <!-- Header / navegación -->
+  <header class="lu-header" role="banner">
+    <div class="lu-header-inner">
+      <a href="#home" class="lu-logo" aria-label="Level Up Gamer">LEVEL-UP GAMER</a>
+      <nav class="lu-nav" role="navigation" aria-label="Navegación principal">
+        <ul>
+          <li><a href="#catalogo">Catálogo</a></li>
+          <li><a href="#categorias">Categorías</a></li>
+          <li><a href="#programa">Programa LevelUp</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#soporte">Soporte</a></li>
+        </ul>
+      </nav>
+
+      <div class="lu-actions" aria-hidden="false">
+        <a href="#registro" class="lu-btn">Regístrate</a>
+        <!-- Agregado contador dinámico del carrito -->
+        <a href="#carrito" class="lu-cart" aria-label="Ver carrito" id="cart-link">Carrito (<span
+            id="cart-count">0</span>)</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main id="home" class="lu-main">
+    <section class="lu-hero" role="region" aria-label="Presentación">
+      <h1 class="lu-hero-title">Desafía tus límites — Level-Up Gamer</h1>
+      <p class="lu-hero-sub">Consolas, periféricos, sillas y más. Envíos a todo Chile.</p>
+      <a href="#catalogo" class="lu-cta">Explorar catálogo</a>
+    </section>
+
+    <!-- Sección de categorías -->
+    <section id="categorias" class="lu-section" aria-labelledby="categorias-h">
+      <h2 id="categorias-h">Categorías</h2>
+      <!-- Agregado filtro de categorías funcional -->
+      <div class="lu-filter-controls">
+        <button class="lu-filter-btn active" data-category="all">Todos</button>
+        <button class="lu-filter-btn" data-category="juegos-mesa">Juegos de Mesa</button>
+        <button class="lu-filter-btn" data-category="accesorios">Accesorios</button>
+        <button class="lu-filter-btn" data-category="consolas">Consolas</button>
+        <button class="lu-filter-btn" data-category="computadores">Computadores</button>
+        <button class="lu-filter-btn" data-category="sillas">Sillas Gamers</button>
+      </div>
+      <ul class="lu-categories" role="list">
+        <li class="lu-cat" data-category="juegos-mesa">Juegos de Mesa</li>
+        <li class="lu-cat" data-category="accesorios">Accesorios</li>
+        <li class="lu-cat" data-category="consolas">Consolas</li>
+        <li class="lu-cat" data-category="computadores">Computadores Gamers</li>
+        <li class="lu-cat" data-category="sillas">Sillas Gamers</li>
+        <li class="lu-cat" data-category="accesorios">Mouse</li>
+        <li class="lu-cat" data-category="accesorios">Mousepad</li>
+        <li class="lu-cat" data-category="ropa">Poleras Personalizadas</li>
+        <li class="lu-cat" data-category="ropa">Polerones</li>
+        <li class="lu-cat" data-category="servicio">Servicio Técnico</li>
+      </ul>
+    </section>
+
+    <!-- Catálogo / productos -->
+    <section id="catalogo" class="lu-section" aria-labelledby="catalogo-h">
+      <h2 id="catalogo-h">Catálogo destacado</h2>
+
+      <div class="lu-products" role="list" id="products-container">
+        <!-- Usando imágenes reales proporcionadas y mejorando estructura de datos -->
+        <article class="lu-product" role="listitem" data-code="JM002" data-price="24990" data-category="juegos-mesa">
+          <img
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/carcassone.jpg-X8PrHb9Gjnm8xymN5tMunla5JoUtxD.png"
+            alt="Carcassonne - juego de mesa" class="lu-product-img" />
+          <h3 class="lu-product-title">Carcassonne</h3>
+          <p class="lu-product-cat">Juegos de Mesa — JM002</p>
+          <p class="lu-product-price">$24.990 CLP</p>
+          <p class="lu-product-desc">Juego de estrategia de construcción de ciudades medievales para 2-5 jugadores.</p>
+          <div class="lu-product-actions">
+            <label>
+              Cant.
+              <input type="number" value="1" min="1" max="10" class="lu-qty" />
+            </label>
+            <button type="button" class="lu-addcart" data-product-code="JM002">Agregar al carrito</button>
+          </div>
+        </article>
+
+        <article class="lu-product" role="listitem" data-code="AC002" data-price="79990" data-category="accesorios">
+          <img
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hyperx.jpg-zyMx2dTWg4ep7BMp2YMp1ofXKiSeyN.jpeg"
+            alt="Auriculares HyperX Cloud II" class="lu-product-img" />
+          <h3 class="lu-product-title">Auriculares HyperX Cloud II</h3>
+          <p class="lu-product-cat">Accesorios — AC002</p>
+          <p class="lu-product-price">$79.990 CLP</p>
+          <p class="lu-product-desc">Auriculares gaming profesionales con sonido 7.1 virtual y micrófono desmontable.
+          </p>
+          <div class="lu-product-actions">
+            <label>
+              Cant.
+              <input type="number" value="1" min="1" max="10" class="lu-qty" />
+            </label>
+            <button type="button" class="lu-addcart" data-product-code="AC002">Agregar al carrito</button>
+          </div>
+        </article>
+
+        <article class="lu-product" role="listitem" data-code="CO001" data-price="549990" data-category="consolas">
+          <img
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/play5.jpg-kjWgD8UZv4ap8q58nqSyBzJKCN3usK.png"
+            alt="PlayStation 5" class="lu-product-img" />
+          <h3 class="lu-product-title">PlayStation 5</h3>
+          <p class="lu-product-cat">Consolas — CO001</p>
+          <p class="lu-product-price">$549.990 CLP</p>
+          <p class="lu-product-desc">La consola de nueva generación con gráficos 4K y carga ultrarrápida.</p>
+          <div class="lu-product-actions">
+            <label>
+              Cant.
+              <input type="number" value="1" min="1" max="3" class="lu-qty" />
+            </label>
+            <button type="button" class="lu-addcart" data-product-code="CO001">Agregar al carrito</button>
+          </div>
+        </article>
+
+        <article class="lu-product" role="listitem" data-code="CG001" data-price="1299990" data-category="computadores">
+          <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/asus.jpg-dGjMUdO1QYSIINEOHS8cH6HDHwk8Vv.png"
+            alt="PC Gamer ASUS ROG Strix" class="lu-product-img" />
+          <h3 class="lu-product-title">PC Gamer ASUS ROG Strix</h3>
+          <p class="lu-product-cat">Computadores Gamers — CG001</p>
+          <p class="lu-product-price">$1.299.990 CLP</p>
+          <p class="lu-product-desc">Laptop gaming de alto rendimiento con RTX 4070 y pantalla 144Hz.</p>
+          <div class="lu-product-actions">
+            <label>
+              Cant.
+              <input type="number" value="1" min="1" max="2" class="lu-qty" />
+            </label>
+            <button type="button" class="lu-addcart" data-product-code="CG001">Agregar al carrito</button>
+          </div>
+        </article>
+
+        <article class="lu-product" role="listitem" data-code="SG001" data-price="349990" data-category="sillas">
+          <img
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/titan.jpg-hfWWpidXVq8reiyWttOygyl5o7DjwM.webp"
+            alt="Silla Secretlab Titan" class="lu-product-img" />
+          <h3 class="lu-product-title">Silla Gamer Secretlab Titan</h3>
+          <p class="lu-product-cat">Sillas Gamers — SG001</p>
+          <p class="lu-product-price">$349.990 CLP</p>
+          <p class="lu-product-desc">Silla ergonómica premium con soporte lumbar y materiales de alta calidad.</p>
+          <div class="lu-product-actions">
+            <label>
+              Cant.
+              <input type="number" value="1" min="1" max="5" class="lu-qty" />
+            </label>
+            <button type="button" class="lu-addcart" data-product-code="SG001">Agregar al carrito</button>
+          </div>
+        </article>
+
+        <article class="lu-product" role="listitem" data-code="MS001" data-price="49990" data-category="accesorios">
+          <img src="https://assets.pcfactory.cl/public/foto/31218/1_1000.jpg?t=1756218584572" alt="Mouse Logitech G502"
+            class="lu-product-img" />
+          <h3 class="lu-product-title">Mouse Gamer Logitech G502</h3>
+          <p class="lu-product-cat">Mouse — MS001</p>
+          <p class="lu-product-price">$49.990 CLP</p>
+          <p class="lu-product-desc">Mouse gaming de precisión con sensor HERO 25K y 11 botones programables.</p>
+          <div class="lu-product-actions">
+            <label>
+              Cant.
+              <input type="number" value="1" min="1" max="10" class="lu-qty" />
+            </label>
+            <button type="button" class="lu-addcart" data-product-code="MS001">Agregar al carrito</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Aside: carrito resumen -->
+    <aside id="carrito" class="lu-aside" aria-labelledby="carrito-h">
+      <h2 id="carrito-h">Carrito</h2>
+      <div class="lu-cart-summary" aria-live="polite">
+        <!-- Carrito dinámico con JavaScript -->
+        <div id="cart-items"></div>
+        <dl class="lu-cart-totals">
+          <div>
+            <dt>Subtotal</dt>
+            <dd id="cart-subtotal">$0 CLP</dd>
+          </div>
+          <div>
+            <dt>Envío</dt>
+            <dd>Calculado en el checkout</dd>
+          </div>
+          <div class="lu-total">
+            <dt>Total</dt>
+            <dd id="cart-total">$0 CLP</dd>
+          </div>
+        </dl>
+        <button id="clear-cart" class="lu-btn" style="background: #ef4444; margin-bottom: 1rem;">Vaciar carrito</button>
+        <a href="#checkout" class="lu-btn lu-btn-primary">Finalizar compra</a>
+      </div>
+    </aside>
+
+    <!-- Registro / autenticación -->
+    <section id="registro" class="lu-section" aria-labelledby="registro-h">
+      <h2 id="registro-h">Registro de usuario</h2>
+      <!-- Formulario mejorado con validaciones en tiempo real -->
+      <form class="lu-form" id="register-form" method="post" action="/registro" novalidate>
+        <p class="lu-note">Solo mayores de 18 años (validación cliente/servidor requerida).</p>
+
+        <label>
+          Nombre completo
+          <input type="text" name="nombre" id="nombre" required minlength="2" />
+          <small class="lu-hint validation-message" id="nombre-validation"></small>
+        </label>
+
+        <label>
+          Correo electrónico
+          <input type="email" name="email" id="email" required />
+          <small class="lu-hint">Los correos @duoc.cl reciben 20% de descuento de por vida después de
+            validación.</small>
+          <small class="lu-hint validation-message" id="email-validation"></small>
+        </label>
+
+        <label>
+          Fecha de nacimiento
+          <input type="date" name="fecha_nacimiento" id="fecha_nacimiento" required aria-describedby="edadHint" />
+          <small id="edadHint">Debes ser mayor de 18 años. Se validará en el servidor.</small>
+          <small class="lu-hint validation-message" id="fecha-validation"></small>
+        </label>
+
+        <label>
+          Contraseña
+          <input type="password" name="password" id="password" minlength="8" required />
+          <small class="lu-hint">Mínimo 8 caracteres, debe incluir mayúsculas, minúsculas y números.</small>
+          <small class="lu-hint validation-message" id="password-validation"></small>
+        </label>
+
+        <label>
+          Confirmar contraseña
+          <input type="password" name="password_confirm" id="password_confirm" required />
+          <small class="lu-hint validation-message" id="password-confirm-validation"></small>
+        </label>
+
+        <label>
+          Código de referido (opcional)
+          <input type="text" name="codigo_referido" id="codigo_referido" placeholder="Ej: AMIGO123" />
+        </label>
+
+        <fieldset>
+          <legend>Preferencias</legend>
+          <label><input type="checkbox" name="news" checked /> Recibir novedades y ofertas</label>
+          <label><input type="checkbox" name="gamify" checked /> Participar en programa LevelUp</label>
+        </fieldset>
+
+        <button type="submit" class="lu-btn lu-btn-primary" id="register-submit">Crear cuenta</button>
+        <div id="register-success" class="lu-success" style="display: none;">¡Cuenta creada exitosamente!</div>
+      </form>
+    </section>
+
+    <!-- Programa de gamificación -->
+    <section id="programa" class="lu-section" aria-labelledby="programa-h">
+      <h2 id="programa-h">Programa LevelUp</h2>
+      <p>Gana puntos LevelUp por compras y referidos. Canjea por descuentos y productos.</p>
+      <ul class="lu-program-features">
+        <li>Puntos por compra</li>
+        <li>Puntos extra por referidos validados</li>
+        <li>Niveles con beneficios exclusivos</li>
+      </ul>
+
+      <!-- Formulario de canje / consulta de puntos (en el futuro con backend) -->
+      <form class="lu-form" id="points-check" action="/puntos" method="get" novalidate>
+        <label>
+          Usuario (email)
+          <input type="email" name="email" required />
+        </label>
+        <button type="submit" class="lu-btn">Ver puntos</button>
+      </form>
+    </section>
+
+    <!-- Reseñas y calificaciones -->
+    <section id="reseñas" class="lu-section" aria-labelledby="reseñas-h">
+      <h2 id="reseñas-h">Reseñas de clientes</h2>
+
+      <!-- Formulario de reseñas mejorado con validaciones -->
+      <form class="lu-review-form" id="review-form" action="/reseñas" method="post" novalidate>
+        <label>
+          Producto (código)
+          <select name="producto" id="producto-select" required>
+            <option value="">Seleccione un producto</option>
+            <option value="JM002">Carcassonne - JM002</option>
+            <option value="AC002">Auriculares HyperX - AC002</option>
+            <option value="CO001">PlayStation 5 - CO001</option>
+            <option value="CG001">PC ASUS ROG - CG001</option>
+            <option value="SG001">Silla Secretlab - SG001</option>
+            <option value="MS001">Mouse Logitech - MS001</option>
+          </select>
+        </label>
+        <label>
+          Tu reseña
+          <textarea name="comentario" id="comentario" rows="4" required minlength="10" maxlength="500"></textarea>
+          <small class="lu-hint"><span id="char-count">0</span>/500 caracteres</small>
+        </label>
+        <label>
+          Calificación
+          <div class="star-rating" id="star-rating">
+            <span class="star" data-rating="1">★</span>
+            <span class="star" data-rating="2">★</span>
+            <span class="star" data-rating="3">★</span>
+            <span class="star" data-rating="4">★</span>
+            <span class="star" data-rating="5">★</span>
+          </div>
+          <input type="hidden" name="rating" id="rating-input" required />
+        </label>
+        <button type="submit" class="lu-btn">Enviar reseña</button>
+        <div id="review-success" class="lu-success" style="display: none;">¡Reseña enviada exitosamente!</div>
+      </form>
+
+      <!-- Listado de reseñas -->
+      <div class="lu-reviews-list" id="reviews-list" aria-live="polite">
+        <div class="sample-review">
+          <h4>★★★★★ Excelente producto - AC002</h4>
+          <p>"Los auriculares HyperX son increíbles, la calidad de sonido es perfecta para gaming."</p>
+          <small>- Usuario verificado</small>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog / noticias -->
+    <section id="blog" class="lu-section" aria-labelledby="blog-h">
+      <h2 id="blog-h">Blog y noticias</h2>
+      <article class="lu-article">
+        <h3>Últimas novedades en el mundo gamer</h3>
+        <p class="lu-article-excerpt">Publicaciones, guías y reviews. (Contenido gestionado por el CMS).</p>
+        <a href="/blog" class="lu-link">Ver todas</a>
+      </article>
+    </section>
+
+    <!-- Mapa de eventos (placeholder) -->
+    <section id="eventos" class="lu-section" aria-labelledby="eventos-h">
+      <h2 id="eventos-h">Mapa de eventos</h2>
+      <p class="lu-small">Mapa interactivo con ubicaciones de eventos (integrar Google Maps en implementación final).
+      </p>
+      <div class="lu-map-placeholder" role="img" aria-label="Mapa de eventos — placeholder">[Mapa aquí]</div>
+    </section>
+
+    <!-- Soporte / contacto -->
+    <section id="soporte" class="lu-section" aria-labelledby="soporte-h">
+      <h2 id="soporte-h">Soporte técnico</h2>
+      <p>Contáctanos vía chat que redirige a WhatsApp o por correo.</p>
+      <p>
+        <a href="https://wa.me/569XXXXXXXX" class="lu-whatsapp" aria-label="Contactar soporte por WhatsApp">Chatear por
+          WhatsApp</a>
+      </p>
+
+      <!-- Formulario de soporte mejorado -->
+      <form class="lu-form" id="support-form" action="/soporte" method="post" novalidate>
+        <label>
+          Nombre
+          <input type="text" name="nombre" id="support-nombre" required />
+        </label>
+        <label>
+          Correo
+          <input type="email" name="correo" id="support-correo" required />
+        </label>
+        <label>
+          Tipo de consulta
+          <select name="tipo" id="support-tipo" required>
+            <option value="">Seleccione el tipo</option>
+            <option value="tecnico">Soporte técnico</option>
+            <option value="producto">Consulta de producto</option>
+            <option value="envio">Información de envío</option>
+            <option value="devolucion">Devolución/Cambio</option>
+            <option value="otro">Otro</option>
+          </select>
+        </label>
+        <label>
+          Mensaje
+          <textarea name="mensaje" id="support-mensaje" rows="4" required minlength="10"></textarea>
+        </label>
+        <button type="submit" class="lu-btn">Enviar</button>
+        <div id="support-success" class="lu-success" style="display: none;">¡Mensaje enviado exitosamente! Te
+          responderemos pronto.</div>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="lu-footer" role="contentinfo">
+    <div class="lu-footer-inner">
+      <p>© <span id="year"></span> Level-Up Gamer — Envíos a todo Chile.</p>
+      <nav aria-label="Enlaces de pie de página">
+        <a href="/privacidad">Política de privacidad</a> |
+        <a href="/terminos">Términos y condiciones</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- JavaScript mejorado con funcionalidades completas -->
+  <script src="script.js"></script>
+</body>
+
+</html>
